@@ -8,7 +8,24 @@ import { JoueurService } from '../services/joueur.service'
   styleUrls: ['./fiche.component.css'],
 })
 export class FicheComponent implements OnInit {
+  player = new Joueur()
+  submitted = false
   constructor(private joueurService: JoueurService) {}
 
   ngOnInit() {}
+  newPlayer(): void {
+    this.submitted = false
+    this.player = new Joueur()
+  }
+  save() {
+    this.joueurService
+      .createNewPlayer(this.player)
+      .subscribe(data => console.log(data), error => console.log(error))
+    this.player = new Joueur()
+  }
+
+  onSubmit() {
+    this.submitted = true
+    this.save()
+  }
 }

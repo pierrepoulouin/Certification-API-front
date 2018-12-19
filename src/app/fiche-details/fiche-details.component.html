@@ -1,0 +1,6 @@
+<h1>Liste des joueurs</h1>
+<ul class="list-group list-group-flush">
+  <li id="joueur" class="list-group-item" *ngFor="let joueur of players">
+    {{ joueur.country }} {{ joueur.pseudo }}
+  </li>
+</ul>

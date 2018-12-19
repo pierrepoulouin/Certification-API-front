@@ -2,70 +2,91 @@
   <br />
   <h1 class="text-center">Creation de ma Fiche</h1>
   <br />
+  <form (ngSubmit)="onSubmit()">
+    <div class="d-flex justify-content-center">
+      <div class="md-form w-25">
+        <label for="pseudo">Pseudo</label>
+        <input
+          mdbInputDirective
+          type="text"
+          class="form-control"
+          placeholder="ex: Lloyds"
+          required
+          [(ngModel)]="joueur.Pseudo"
+          name="pseudo"
+        />
 
-  <div class="d-flex justify-content-center">
-    <div class="md-form w-25">
-      <input
-        mdbInputDirective
-        type="text"
-        class="form-control"
-        placeholder="ex: Lloyds"
-      />
+        <label for="form1" id="label">Pseudo</label>
+      </div>
+    </div>
+    <div class="d-flex justify-content-center">
+      <div class="md-form w-25">
+        <input
+          mdbInputDirective
+          type="text"
+          id="form1"
+          class="form-control"
+          placeholder="ex: Overwatch"
+          required
+          [(ngModel)]="joueur.game"
+        />
+        <label for="form1" id="label">Jeu</label>
+      </div>
+    </div>
+    <div class="d-flex justify-content-center">
+      <div class="md-form w-25">
+        <input
+          mdbInputDirective
+          type="text"
+          id="form1"
+          class="form-control"
+          placeholder="ex: France"
+          required
+          [(ngModel)]="joueur.country"
+        />
+        <label for="form1" id="label">Pays</label>
+      </div>
+    </div>
+    <div class="d-flex justify-content-center">
+      <div class="md-form w-25">
+        <input
+          mdbInputDirective
+          type="text"
+          id="form1"
+          class="form-control"
+          placeholder="ex: ESWC"
+          required
+          [(ngModel)]="joueur.prizeList"
+        />
+        <label for="form1" id="label">Palmares</label>
+      </div>
+    </div>
+    <div class="d-flex justify-content-center">
+      <div class="md-form w-25">
+        <input
+          mdbInputDirective
+          type="text"
+          id="form1"
+          class="form-control"
+          placeholder="ex: 1000.00 euros"
+          required
+          [(ngModel)]="joueur.salary"
+        />
+        <label for="form1" id="label">Salaire</label>
+      </div>
+    </div>
 
-      <label for="form1" id="label">Pseudo</label>
+    <div class="d-flex justify-content-center">
+      <button
+        mdbBtn
+        type="button"
+        gradient="blue"
+        rounded="true"
+        mdbWavesEffect
+        (click)="newPlayer()"
+      >
+        Creer ma fiche
+      </button>
     </div>
-  </div>
-  <div class="d-flex justify-content-center">
-    <div class="md-form w-25">
-      <input
-        mdbInputDirective
-        type="text"
-        id="form1"
-        class="form-control"
-        placeholder="ex: Overwatch"
-      />
-      <label for="form1" id="label">Jeu</label>
-    </div>
-  </div>
-  <div class="d-flex justify-content-center">
-    <div class="md-form w-25">
-      <input
-        mdbInputDirective
-        type="text"
-        id="form1"
-        class="form-control"
-        placeholder="ex: France"
-      />
-      <label for="form1" id="label">Pays</label>
-    </div>
-  </div>
-  <div class="d-flex justify-content-center">
-    <div class="md-form w-25">
-      <input
-        mdbInputDirective
-        type="text"
-        id="form1"
-        class="form-control"
-        placeholder="ex: ESWC"
-      />
-      <label for="form1" id="label">Palmares</label>
-    </div>
-  </div>
-  <div class="d-flex justify-content-center">
-    <div class="md-form w-25">
-      <input
-        mdbInputDirective
-        type="text"
-        id="form1"
-        class="form-control"
-        placeholder="ex: 1000.00 euros"
-      />
-      <label for="form1" id="label">Salaire</label>
-    </div>
-  </div>
-  <div class="d-flex justify-content-center">
-    <button mdbBtn type="button" gradient="blue" rounded="true" mdbWavesEffect>
-      Creer ma fiche
-    </button>
-  </div>
+  </form>
 </body>
